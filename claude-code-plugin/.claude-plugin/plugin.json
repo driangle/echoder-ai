@@ -1,0 +1,13 @@
+{
+  "name": "echoder",
+  "description": "Write, run, and verify Echoder sketches — the real-time creative coding environment for generative video and audio.",
+  "version": "0.1.0",
+  "author": {
+    "name": "German Greiner",
+    "url": "https://github.com/driangle"
+  },
+  "homepage": "https://github.com/driangle/echoder-ai",
+  "repository": "https://github.com/driangle/echoder-ai",
+  "license": "MIT",
+  "keywords": ["echoder", "creative-coding", "generative", "visuals", "audio"]
+}

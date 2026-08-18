@@ -1,0 +1,26 @@
+{
+  "name": "echoder-marketplace",
+  "owner": {
+    "name": "German Greiner",
+    "url": "https://github.com/driangle"
+  },
+  "metadata": {
+    "description": "Claude Code plugins for Echoder — the real-time creative coding environment for generative video and audio.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "echoder",
+      "source": "./claude-code-plugin",
+      "description": "Write, run, and verify Echoder sketches — the real-time creative coding environment for generative video and audio.",
+      "author": {
+        "name": "German Greiner",
+        "url": "https://github.com/driangle"
+      },
+      "homepage": "https://github.com/driangle/echoder-ai",
+      "license": "MIT",
+      "category": "productivity",
+      "tags": ["echoder", "creative-coding", "generative", "visuals", "audio"]
+    }
+  ]
+}

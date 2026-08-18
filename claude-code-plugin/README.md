@@ -56,22 +56,16 @@ Directory-form projects (`echoder.yaml` + `main.js` + sketch files) and loose
 `.js` sketches. For a `.echo` bundle or a web-mode (`localStorage`) project,
 open it in Studio and save it to a directory first.
 
-## Development
+## Updating
 
-The source of truth for this plugin lives in the Echoder monorepo at
-`claude-code-plugin/`, alongside `.claude-plugin/marketplace.json` at the repo
-root. Everything the plugin needs must be **physically inside this directory** —
-it is copied on install and cannot reach `../docs` or `../examples` at runtime.
-
-Validate both manifests:
-
-```bash
-pnpm check:plugin
+```
+/plugin marketplace update echoder-marketplace
+/reload-plugins
 ```
 
-This also runs as part of `make check-static`, the pre-commit hook, `pnpm check`,
-and CI.
+## Development
 
-Publishing and versioning: see `docs/site/guide/claude-plugin.md` in the monorepo
-(not linked — this README is copied into the published marketplace repo, where
-that path does not exist).
+This plugin is generated from the Echoder source repository. Everything it needs
+is **physically inside this directory** — it is copied on install and cannot
+reach outside itself at runtime. Edits made to the published copy are overwritten
+on the next release, so please open issues upstream.

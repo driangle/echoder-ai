@@ -2,10 +2,9 @@
 
 The public marketplace for [Echoder](https://echoder.dev) Claude Code plugins.
 
-> **This repository is generated.** It is published from the Echoder monorepo by
-> the `publish-plugin` workflow on each `plugin-v*` tag. Open issues and pull
-> requests against the monorepo, not here — edits made directly to this repo are
-> overwritten on the next release.
+> **This repository is generated.** Its contents are published from the Echoder
+> source repository on each release. Edits made directly here are overwritten, so
+> please open issues upstream rather than pull requests against this repo.
 
 ## Install
 

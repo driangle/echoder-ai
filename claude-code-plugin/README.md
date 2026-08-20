@@ -41,14 +41,35 @@ Ask for Echoder work in a project directory and the skill picks it up:
 
 Claude looks up DSL signatures via `echoder types path`, writes the sketch,
 runs it with `echoder run`, renders a frame with `echoder render`, and looks at
-the frame before handing it back. It reports what it could not verify — live
-input (MIDI, mouse, keyboard, camera) cannot be exercised headlessly.
+the frame before handing it back.
+
+### What it can and cannot check
+
+- **2D visuals** — fully: rendered to PNG and looked at.
+- **GL visuals** (`vis`, `shader`, …) — fully, through a headless-Chromium
+  renderer. Needs `echoder install-browser`; if Chromium is missing Claude
+  surfaces the command rather than silently rendering without GL.
+- **Audio** — the render reports a peak level, so silence is caught. Claude
+  cannot listen to it.
+- **Audio-reactive visuals, MIDI, mouse, keyboard, camera, `vision`** — *not*
+  checkable. Analysers and inputs idle at zero headlessly, so a rendered frame
+  shows the sketch's resting state. Claude is instructed to say so rather than
+  describe motion it never saw.
+
+The skill carries two references it consults as it works:
+`skills/echoder/references/recipes.md` (ten verified patterns) and
+`skills/echoder/references/errors.md` (failure text → cause → fix, including the
+failures that exit 0).
 
 **Requires the [`echoder` CLI](https://github.com/driangle/echoder):**
 
 ```bash
 brew install driangle/tap/echoder
 ```
+
+The skill's first step is `echoder types path`, which landed **after**
+`cli-v0.1.0`. On an older CLI it fails with `unknown command: types` — check
+`echoder --version` and `brew upgrade driangle/tap/echoder`.
 
 ## Scope
 

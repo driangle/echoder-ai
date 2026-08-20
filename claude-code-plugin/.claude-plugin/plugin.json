@@ -1,7 +1,7 @@
 {
   "name": "echoder",
   "description": "Write, run, and verify Echoder sketches — the real-time creative coding environment for generative video and audio.",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": {
     "name": "German Greiner",
     "url": "https://github.com/driangle"
